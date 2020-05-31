@@ -1,4 +1,4 @@
-package com.sanushi.junit;
+package com.sanushi.junit.basics;
 
 import org.junit.Before;
 import org.junit.Test;

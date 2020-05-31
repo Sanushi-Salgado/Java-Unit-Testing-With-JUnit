@@ -1,4 +1,4 @@
-package com.sanushi;
+package com.sanushi.junit.basics;
 
 import org.junit.*;
 
@@ -13,13 +13,13 @@ public class BankAccountTest {
 
     @BeforeClass
     public static void beforeClass() {
-        System.out.println("Starting to execute test cases. Count: " + count);
+        System.out.println("Starting to execute BankAccountTest. Count: " + count);
     }
 
     @Before
     public void setup() {
         bankAccount = new BankAccount("San", "Sal", 1000.00, BankAccount.CHECKING);
-        System.out.println("Running a test...");
+        System.out.println("Running Utilities test...");
     }
 
     @Test
@@ -39,6 +39,14 @@ public class BankAccountTest {
     public void withdraw_notBranch() throws Exception {
         // The test actually passes. We want the method to throw an IllegalArgumentException.
        bankAccount.withdraw(600.00, false);
+
+//        In older versions of JUnit the following was done
+//       try {
+//           bankAccount.withdraw(600.00, true);
+//           fail("Invalid withdrawal");
+//       }catch (IllegalArgumentException e){
+//
+//       }
     }
 
     @Test
@@ -56,7 +64,7 @@ public class BankAccountTest {
     @Test
     public void isChecking_true() throws Exception {
 //      assertEquals(true, bankAccount.isChecking());
-        assertTrue("This account is not a checking account", bankAccount.isChecking());
+        assertTrue("This account is not Utilities checking account", bankAccount.isChecking());
     }
 
     @After
@@ -66,7 +74,7 @@ public class BankAccountTest {
 
     @AfterClass
     public static void afterClass() {
-        System.out.println("Completed execution of test cases. Count: " + count);
+        System.out.println("Completed executing BankAccountTest. Count: " + count);
     }
 
 }

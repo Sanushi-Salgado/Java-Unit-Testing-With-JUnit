@@ -1,4 +1,4 @@
-package com.sanushi;
+package com.sanushi.junit.basics;
 
 /**
  * Created by Sanushi Salgado on 28/05/2020
@@ -20,7 +20,7 @@ public class BankAccount {
     }
 
     // The branch argument is true, if the customer is performing the transaction at
-    // a branch, with a teller
+    // Utilities branch, with Utilities teller
     // False, if the customer is performing the transaction at an ATM
     public double deposit(double amount, boolean branch) {
         balance += amount;
